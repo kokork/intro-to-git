@@ -31,7 +31,6 @@ def parsiraj_jedan_html_redak(stupci: bs4.BeautifulSoup) -> kriptovaluta:
     trend_7d_postotak = stupci[6].get_text()
     trend_7d_html_class = stupci[6].find_all("span")[-1]["class"]  # icon-Caret-up/icon-Caret-down
     
-
     # parsiraj 24h trend
     if "icon-Caret-up" in trend_24h_html_class:
         trend_24h = "up"
